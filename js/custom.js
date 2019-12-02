@@ -269,9 +269,9 @@
 
 	var dateCountDown = function() {
 		$('date-countdown').simplyCountdown({
-	    year: 2019, // year
-	    month: 5, // month
-	    day: 25, // day
+	    year: 2020, // year
+	    month: 4, // month
+	    day: 4, // day
 	    hours: 20, // Default is 0 [0-23] integer
       minutes: 0, // Default is 0 [0-59] integer
       seconds: 0, // Default is 0 [0-59] integer
