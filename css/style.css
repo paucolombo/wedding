@@ -1618,24 +1618,26 @@ a:hover, a:focus, a:active {
 }
 .negrita {
   font-weight: bold;
-}
-.mostrarCeluRegalo{
-  display: none;
-}
-@media (max-width: 900px) {
-  .ocultar{
-    display: none;
-  }
-  .mostrarPcRegalo{
-    display: none;
-  }
-  .mostrarCeluRegalo{
-    display: block;
-  }
-
-}		
+}	
 .regalosTitile {
   color: white;
   text-transform: uppercase;
-  margin-top: -18%;
+  margin-top: 16%;
 }
+.regalosCBU{
+  color:white;
+  margin-top: -1%;
+}
+
+@media (max-width: 900px) {
+  .mostrarPC{
+    display: none;
+  }
+  .mostrarCelu{
+    font-size: 25px;
+  }
+  .mostrarCelus{
+    margin-top:70%;
+  }
+  
+}	
