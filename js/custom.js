@@ -353,11 +353,8 @@
     if (e.preventDefault) e.preventDefault();
 
 		/* do what you want with the form */
-		console.log("todo ", e)
 		var name = e.target[0].value
-		console.log("name ", name)
 		var mail = e.target[1].value
-		console.log("mail ", mail)
 		var viene = "indefinido (no marco nada le gile)"
 		var viene_si = e.target[2].checked
 		var viene_no = e.target[3].checked
@@ -367,15 +364,34 @@
 			viene = "No viene"
 		if (viene_si && viene_no)
 			viene = "Marco en el formulario que 'Viene' y  'No Viene'.  O no entendio nada de la vida, o entendio todo y tenia ganas de joder"
-			console.log("viene ", viene)
 		var celiaco = e.target[4].checked
-		console.log("celiaco ", celiaco)
 		var vegetariano = e.target[5].checked
-		console.log("vegetariano ", vegetariano)
 		var nota = e.target[6].value
-		console.log("nota ", nota)
-			// You must return false to prevent the default form behavior
-    return false;
+		celiaco = celiaco ? "si" : "no" + "\n"
+		vegetariano = vegetariano ? "si" : "no" + "\n"
+		let body= 'Nombre: ' + name + '\n';
+		body = body + "Mail: " + mail + "\n";
+		body = body + "Viene?:" + viene + "\n";
+		body = body + "Celiaco?: " + 	celiaco + "\n"
+		body = body + "Celiaco?: " + 	celiaco + "\n"
+		body = body + "Vegetariano?: " + 	vegetariano + "\n"
+		body = body + "Que mas nos dijo?: " + 	nota + "\n"
+		Email.send({
+			Host: "smtp.gmail.com",
+			Username : "¡",
+			Password : "#",
+			To : '',
+			From : "",
+			Subject : "casorio",
+			Body : "cuerpo",
+		})
+		.then(function(message){
+			console.log('mail ', message);
+			alert("Gracias! ")
+		});
+		// You must return false to prevent the default form behavior
+		return false;
+		
 }
 
 var form = document.getElementById('formulario');
