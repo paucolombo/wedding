@@ -1633,8 +1633,11 @@ a:hover, a:focus, a:active {
   .mostrarPC{
     display: none;
   }
+  .regalosTitile{
+    margin-bottom: 0;
+  }
   .mostrarCelu{
-    font-size: 25px;
+    font-size: 22px;
   }
   .mostrarCelus{
     margin-top:70%;
