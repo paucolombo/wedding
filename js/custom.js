@@ -349,4 +349,40 @@
 		flexSlider();
 	});
 
+	function processForm(e) {
+    if (e.preventDefault) e.preventDefault();
+
+		/* do what you want with the form */
+		console.log("todo ", e)
+		var name = e.target[0].value
+		console.log("name ", name)
+		var mail = e.target[1].value
+		console.log("mail ", mail)
+		var viene = "indefinido (no marco nada le gile)"
+		var viene_si = e.target[2].checked
+		var viene_no = e.target[3].checked
+		if (viene_si && !viene_no)
+			viene = "Viene"
+		if (viene_no && !viene_si)
+			viene = "No viene"
+		if (viene_si && viene_no)
+			viene = "Marco en el formulario que 'Viene' y  'No Viene'.  O no entendio nada de la vida, o entendio todo y tenia ganas de joder"
+			console.log("viene ", viene)
+		var celiaco = e.target[4].checked
+		console.log("celiaco ", celiaco)
+		var vegetariano = e.target[5].checked
+		console.log("vegetariano ", vegetariano)
+		var nota = e.target[6].value
+		console.log("nota ", nota)
+			// You must return false to prevent the default form behavior
+    return false;
+}
+
+var form = document.getElementById('formulario');
+if (form.attachEvent) {
+    form.attachEvent("submit", processForm);
+} else {
+    form.addEventListener("submit", processForm);
+}
+
 })();
